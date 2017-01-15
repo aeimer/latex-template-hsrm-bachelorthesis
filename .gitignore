@@ -37,7 +37,4 @@
 *.bib.sav
 
 # Progamms
-JabRef-3.8.1.jar
-
-# Book PDFs
-books/*/*.pdf
+JabRef-*.jar
