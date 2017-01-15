@@ -1,0 +1,65 @@
+﻿%----------------- KONFIGURATION ----------------- %
+\pagestyle{empty} % enthalten keinerlei Kopf oder Fuß 
+
+\newgeometry{left=4cm, right=2cm, top=1cm, bottom=1cm} % Mehr Platz oben und unten
+%----------------- HS RM Logo ----------------- %
+\begin{figure}[t]
+	\flushright
+	\includegraphics[width=0.3\textwidth]{media/logo_hsrm}
+\end{figure}
+
+%----------------- INHALT ----------------- %
+
+\begin{center}
+Hochschule RheinMain \\
+Fachbereich ++???++ \\
+Studiengang ++???++
+
+% Whitespace
+\vspace{30 pt}
+
+{\Large \textbf{Bachelor-Arbeit}} \\
+zur Erlangung des akademischen Grades \\ 
+Bachelor of Science - B.Sc.\todoi{Stimmt der Grad?}
+
+% Whitespace
+\vspace{50 pt}
+
+\begin{spacing}{1.2}
+\LARGE \textbf{\thetitle}
+\end{spacing}
+%
+\end{center}
+
+\vfill % Fills all the space, so the follwing stuff is floating down
+
+%
+\begin{small}
+\begin{tabular}[h]{p{4cm}l l}
+	vorgelegt von        & \textbf{++Vorname++ \textsc{++Nachname++}} \\ 
+	                     & Matrikelnummer ++MatrNr++ \\
+                	     & ++Straße / Hausnummer++ \\
+	                     & ++PLZ Ort++ \\
+	                     & \\
+	am                   & \thedate \\
+                	     & \\
+	Referent:            & Prof. Dr. ++Vorname++ \textsc{++Nachname++}\\
+	Korreferent:         & Prof. Dr. ++Vorname++ \textsc{++Nachname++}\\
+	Betreuer extern:     & ++Titel++ ++Vorname++ \textsc{++Nachname++}\\
+\end{tabular}
+%
+\vspace{15pt}
+%
+\begin{center}
+	Durchgeführt bei der ++Firmenname++\\
+	++Str / Nummer++, ++PLZ Ort++
+\end{center}
+\end{small}
+%
+\vspace{15pt}
+%
+\begin{center}
+	\textcolor[gray]{0.4}{\tiny Kompiliert am \today ~um \currenttime ~- Erstellt mit \LaTeX}
+\end{center}
+%
+\restoregeometry % Normales definiertes Layout

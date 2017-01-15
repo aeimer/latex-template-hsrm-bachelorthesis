@@ -35,6 +35,7 @@
 *.lol
 *.bib.bak
 *.bib.sav
+*.lod
 
 # Progamms
 JabRef-*.jar
