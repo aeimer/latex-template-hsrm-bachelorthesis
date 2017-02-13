@@ -1,0 +1,19 @@
+# https://blog.hrz.tu-chemnitz.de/urzcommunity/2016/01/22/automatische-tests-mit-gitlab-ci/
+
+variables:
+  USE_BIBTEX: 'true'
+  DESTINATIONFOLDER: "processed_pdfs"
+
+make_latex:
+  # https://hub.docker.com/r/tianon/latex/
+  image: tianon/latex
+  stage: build
+  only:
+    - master@aeimer/latex-template-hsrm-bachelorthesis
+  script:
+    - bash .build/build.sh ci
+    - bash .build/cloc.sh
+  artifacts:
+    paths:
+      - '${DESTINATIONFOLDER}/'
+      - 'cloc-results.txt'
