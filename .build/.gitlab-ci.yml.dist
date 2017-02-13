@@ -9,7 +9,7 @@ make_latex:
   image: tianon/latex
   stage: build
   only:
-    - master@aeimer/latex-template-hsrm-bachelorthesis
+    - master@yournamespace/yourrepo
   script:
     - bash .build/build.sh ci
     - bash .build/cloc.sh
