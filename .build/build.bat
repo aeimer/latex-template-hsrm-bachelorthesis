@@ -1,13 +1,13 @@
-# Buildsctipt
-# by Alexander Eimer
-# from Github/aeimer
+@echo off
+REM Buildsctipt
+REM by Alexander Eimer
+REM from Github/aeimer
 
-echo Start Compile
+echo
+echo Working in:
+echo %cd%
 echo.
-echo go to project root
-cd ..
-echo now in:
-cd
+echo Start Compile
 echo.
 echo.
 call:compileLatex
