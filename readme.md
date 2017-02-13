@@ -3,6 +3,8 @@ _This is the template I used for my bachelorthesis. There is no warranty for any
 
 __This template is _INOFFICIAL_ and may help you to design your own template.__
 
+Thanks to [iNeedCode](https://github.com/iNeedCode/latex_template) for the examples, I think the root of this template belongs to him.
+
 ## Anmerkungen
 - Die Vorlage ist, durch den breiteren Rand links, für den einseitigen Druck gedacht.
 - ```disable``` das ```easy-todo``` Paket vor dem finalen Bauen
