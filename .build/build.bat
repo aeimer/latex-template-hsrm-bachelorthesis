@@ -23,7 +23,8 @@ echo BYE
 
 :compileLatex
 echo "Compile with PDF-LaTeX"
-pdflatex *.tex
+REM need to use the name, because with a wildcard 'pdflatex *.tex' does not find any file
+pdflatex bachelorthesis.tex
 goto:eof
 
 :compileBibtex
