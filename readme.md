@@ -39,7 +39,7 @@ Thanks to [iNeedCode](https://github.com/iNeedCode/latex_template) for the examp
 
 ## Verwendung
 ### Setup
-Lade dieses Repo als ZIP herrunter (oben rechts) oder checke das Repo mit [```git clone https://github.com/aeimer/latex-template-hsrm-bachelorthesis.git```](https://github.com/aeimer/latex-template-hsrm-bachelorthesis.gitr), anschließend kannst du die den ```.git```-Ordner und ggf. diese ```readme.md``` löschen.
+Lade dieses Repo als ZIP herrunter (oben rechts) oder checke das Repo mit [```git clone https://github.com/aeimer/latex-template-hsrm-bachelorthesis.git```](https://github.com/aeimer/latex-template-hsrm-bachelorthesis.git), anschließend kannst du die den ```.git```-Ordner, das ```LICENSE```-File und ggf. diese ```readme.md``` löschen.
 
 Nun lade dir ggf. [JabRef](http://www.jabref.org) herunter, die Datei kannst du direkt in dem Ordner speichern, sie ist in der ```.gitignore``` schon enthalten.
 Falls du keine Versionierung für deine Arbeit brauchst, kannst du die ```.gitignore``` ebenfalls löschen.

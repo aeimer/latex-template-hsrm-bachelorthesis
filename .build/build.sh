@@ -5,15 +5,18 @@
 # from Github/aeimer
 
 # Check if USE_BIBTEX is set or set default to true
-if [ -z ${USE_BIBTEX+x} ] ; then
-	if [ $1 == "nobib" ] ; then
-		USE_BIBTEX="false"
-	else
-		USE_BIBTEX="true"
+if [ -z "$USE_BIBTEX" ] ; then
+	USE_BIBTEX="true"
+	if [ $# -eq 1 ] ; then
+		if [ "$1" == "nobib" ] ; then
+			USE_BIBTEX="false"
+		fi
 	fi
 fi
 
 echo "Buildscript"
+echo
+echo "will use bibtex? $USE_BIBTEX"
 echo
 
 # Check PDF Latex
@@ -49,25 +52,25 @@ function compilePDFLatex {
 
 function compileBibtex {
 	echo "Compile with BibTeX"
-	bibtex
+	bibtex *.aux
 	exitcode=$?
 	if [ $exitcode -ne 0 ] ; then echo "HERE WAS THE ERROR"; exit $exitcode ; fi
 }
 
 compilePDFLatex
 echo
-if [ $USE_BIBTEX == "true" ] ; then compileBibtex ; fi
+if [ "$USE_BIBTEX" == "true" ] ; then compileBibtex ; fi
 echo
 compilePDFLatex
 echo
-if [ $USE_BIBTEX == "true" ] ; then compileBibtex ; fi
+if [ "$USE_BIBTEX" == "true" ] ; then compileBibtex ; fi
 echo
 compilePDFLatex
 echo
 compilePDFLatex
 echo
 echo 
-if [ $1 == "ci" ] ; then
+if [ $# -eq 1 -a "$1" == "ci" ] ; then
 	echo "++ Copy all PDFs to processed_pdfs ++"
 	cp *.pdf $DESTINATIONFOLDER
 	echo
