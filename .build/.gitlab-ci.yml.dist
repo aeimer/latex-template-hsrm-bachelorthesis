@@ -11,9 +11,15 @@ make_latex:
   only:
     - master@yournamespace/yourrepo
   script:
+    - mkdir -p ${DESTINATIONFOLDER}
     - bash .build/build.sh ci
     - bash .build/cloc.sh
   artifacts:
     paths:
       - '${DESTINATIONFOLDER}/'
       - 'cloc-results.txt'
+    when: on_success
+  artifacts:
+    paths:
+      - '*.log'
+    when: on_failure
