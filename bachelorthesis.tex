@@ -36,7 +36,6 @@
 \usepackage{lmodern} % bessere typographische Qualität 
 \frenchspacing % Schaltet den zusätzlichen Zwischenraum ab; Wird mit ngerman-babel schon geladen
 \usepackage{fix-cm}
-\usepackage{hyperref} % verwandelt alle Kapitelüberschriften, Verweise aufs Literaturverzeichnis und andere Querverweise in PDF-Hyperlinks
 \usepackage{color}
 \usepackage[table]{xcolor}
 \usepackage{enumitem}
@@ -172,6 +171,12 @@ style=alphabetic
   morestring      = [b]",
 }
 
+%------------------Hyperref inkludieren -------------- %
+% das Packet Hyperref erst nach allen anderen Inkludieren, damit auch Verweise
+% auf Fußnoten korrekt geladen werden
+\usepackage{hyperref} % verwandelt alle Kapitelüberschriften, Verweise aufs Literaturverzeichnis und andere Querverweise in PDF-Hyperlinks
+%\usepackage{footnotebackref}    % Rück-Verweise von Fußnoten zu Verweis im Text (Wikipedia-Style)
+%\usepackage{tablefootnote}         % für Fußnoten in Tabellen (dann \tablefootnote{Some Text} verwenden)
 
 %----------------- FARBEN DEFINIEREN ----------------- %
 % ~Hochschulfarben~
